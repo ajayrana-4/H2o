@@ -1,0 +1,280 @@
+/* Workout Details Card */
+.workout-details {
+    background: linear-gradient(135deg, #2a3949, #1c2630);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .workout-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .workout-details::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: #5e72e4;
+    border-radius: 12px 0 0 12px;
+  }
+  
+  .workout-details h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #5e72e4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.8rem;
+  }
+  
+  .workout-details p {
+    font-size: 1.1rem;
+    margin: 0.7rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .workout-details p::before {
+    content: "•";
+    color: #5e72e4;
+    margin-right: 8px;
+    font-size: 1.4rem;
+  }
+  
+  /* For true/false values like dropSets */
+  .workout-details p:last-child {
+    margin-top: 1.2rem;
+    background: rgba(94, 114, 228, 0.1);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .workout-details {
+      padding: 1.2rem;
+    }
+  
+    .workout-details h1 {
+      font-size: 1.5rem;
+    }
+  
+    .workout-details p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background: linear-gradient(135deg, #1c2630, #2a3949);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar h1 {
+    font-size: 1.8rem;
+    color: #5e72e4;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #5e72e4;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .navbar h1 {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  
+    .navbar a {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  /* Workout Form Styles - Completely Different Theme */
+.create {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #333333;
+  position: relative;
+}
+
+.create h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ff6b6b; /* Coral accent color */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.create label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555555;
+  letter-spacing: 0.5px;
+}
+
+.create input[type="text"],
+.create input[type="number"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  background: #f9f9f9;
+  color: #333333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.create input[type="text"]:focus,
+.create input[type="number"]:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+  background: #ffffff;
+}
+
+/* Checkbox styling */
+.create input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  border: 2px solid #e0e0e0;
+  background: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+  margin-top: 0.5rem;
+  vertical-align: middle;
+}
+
+.create input[type="checkbox"]:checked {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.create input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Button styling */
+.create button.addworkout {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  letter-spacing: 1px;
+}
+
+.create button.addworkout:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}
+
+.create button.addworkout:active {
+  transform: translateY(0);
+}
+
+/* Decorative elements */
+.create::after {
+  content: "💪";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  opacity: 0.2;
+}
+
+/* Error message styling */
+.error {
+  background: #fff2f2;
+  border-left: 4px solid #ff6b6b;
+  padding: 1rem;
+  color: #ff5252;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .create {
+    padding: 1.5rem;
+  }
+
+  .create h3 {
+    font-size: 1.5rem;
+  }
+
+  .create label {
+    font-size: 1rem;
+  }
+
+  .create input[type="text"],
+  .create input[type="number"] {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .create button.addworkout {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+  
