@@ -20,19 +20,24 @@ function Home() {
       }
     }
     fetchWorkouts();
-  },[])
+  },[]); 
+  
+  const handledelete=(id)=>{
+    const newworkout=Workouts.filter((workout)=>workout._id!==id); //to delete the workout from the list
+    setWorkouts(newworkout); //to update the state of workouts
+  }
+    
 
   return (
     <div className='home'>
       <div className='workouts'>
         {Workouts.map((workout)=>{
           return(
-            <Workoutdetails key={workout._id} workout={workout}/>
+            <Workoutdetails key={workout._id} workout={workout}  ondelete={handledelete}/> // ✅ PASS IT HERE/>
           )
         })}
       </div> 
-      <WorkoutForm/> {/* Adding the WorkoutForm component here */} 
-      
+      <WorkoutForm setWorkouts={setWorkouts}/> {/* Adding the WorkoutForm component here */}      
     </div>
   );
 }

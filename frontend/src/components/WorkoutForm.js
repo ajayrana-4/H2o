@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 
-const WorkoutForm = () => {
+const WorkoutForm = ({setWorkouts}) => {
   const [title, settitle] = useState("");
   const [sets, setsets] = useState("");
   const [reps, setreps] = useState("");
@@ -34,6 +34,7 @@ const WorkoutForm = () => {
       seterror(null);
       console.log("New workout added", json);
     }
+    setWorkouts((prev)=>[json,...prev]); // Update the workouts state in the parent component
   };
 
   return (
