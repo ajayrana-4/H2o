@@ -4,9 +4,10 @@ import {Link} from "react-router-dom";  // This had incorrect syntax
 function Navbar(){
     return (
        <div className="navbar">
+        
               <Link to="/">Home</Link>
-              <Link to="/about">about</Link>
-              <Link to="/contact">contact</Link>
+              <Link to="/About">about</Link>
+              <Link to="/Contact">contact</Link>
               <Link to="/Login">login</Link>
               
 
